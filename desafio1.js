@@ -15,11 +15,11 @@ class ProductManager {
     };
 
     if (title == undefined || description == undefined || price == undefined || thumbnail == undefined || code == undefined || stock == undefined) {
-      console.log('Debe completar todos los campos');
+      console.log('complete all fields');
     } else {
       const productFound = this.products.some((item) => item.code == code);
       if (productFound) {
-        console.log('El producto ya existe');
+        console.log('The product already exists');
       } else {
         this.products.push(product);
       }
@@ -33,7 +33,7 @@ class ProductManager {
   getProductById(id) {
     const productFound = this.products.find((item) => item.id == id);
     if (productFound) {
-      console.log('El producto encontrado es ', productFound);
+      console.log('The found product is ', productFound);
     } else {
       console.log('Not found');
     }
